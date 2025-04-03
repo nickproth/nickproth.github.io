@@ -1,12 +1,16 @@
 ---
-title: "NickSportsBlog"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "MLB's Money Problem"
+author: "Nick Roth"
+date: '2025-04-01'
+categories: [mlb, baseball, salarycap]
+image: "image.png"
+format: 
+  html:
+    code-fold: true
 ---
+
+Nebraska beats ASU. They dominated the boards.
+
+```{r}
+1 + 1
+```
