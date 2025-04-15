@@ -774,44 +774,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
-<p> Over the past several seasons a problem 
-  ggplot() + 
-  geom_point(data = money, aes(x = Wins, y = Payroll, 
-                               color = case_when(
-                                 Team == "Los Angeles Dodgers" ~ "blue",
-                                 Team == "New York Yankees" ~ "navy",
-                                 Team == "New York Mets" ~ "orange",
-                                 Team == "Chicago White Sox" ~ "black",
-                                 Team == "Oakland Athletics" ~ "darkgreen", 
-                                 TRUE ~ "grey"
-                               ))) + 
-  scale_color_identity() +  
-  geom_text(data = subset(money, Team == "Los Angeles Dodgers"),
-            aes(x = Wins, y = Payroll, label = "Dodgers"),
-            vjust = -1.5, color = "black", size = 2.5) +
-  geom_text(data = subset(money, Team == "New York Yankees"),
-            aes(x = Wins + 2, y = Payroll, label = "Yankees"),
-            vjust = 1.5, color = "black", size = 2.5) + 
-  geom_text(data = subset(money, Team == "New York Mets"),
-            aes(x = Wins, y = Payroll, label = "Mets"),
-            vjust = 1.5, color = "black", size = 2.5) + 
-  geom_text(data = subset(money, Team == "Chicago White Sox"),
-            aes(x = Wins + 3, y = Payroll, label = "White Sox"),
-            vjust = 1.5, color = "black", size = 2.5) +  
-  geom_text(data = subset(money, Team == "Oakland Athletics"),
-            aes(x = Wins, y = Payroll, label = "Athletics"),
-            vjust = -1, color = "black", size = 2.5) + 
-  scale_y_continuous(labels = scales::label_dollar(scale = 1e-6, suffix = "M")) +
-  theme_light() +  # Apply the light theme here permanently for this plot
-  labs(
-    title = "High spending leads to high Win Totals.",
-    subtitle = "How much teams spent vs how much teams won in 2024",
-    x = "Total Wins",
-    y = "Total Payroll (in millions)"
-  ) +
-  annotate("text", x = 85, y = -80000000, label = "Source: Baseball Reference", size = 3, color = "black", hjust = .2, vjust = -0.5) +
-  annotate("text", x = 85, y = -75000000, label = "By: Nicholas Roth", size = 3, color = "black", hjust = -.2, vjust = -2)
-</p>
 
 
 </body></html>
